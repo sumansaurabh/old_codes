@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flight Stream</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="Generator" content="https://callum.com">
+        <link type="text/css" rel="stylesheet" href="css1/style.css" />
+        <style>
+
+      body {
+        padding: 0;
+        margin: 0;
+        background: black;
+
+      }
+
+    </style>
+     
+        <script type="text/javascript" src="js1/three.min.js"></script>
+        <script type="text/javascript" src="js1/Detector.js"></script>
+        
+        <script type="text/javascript" src="js1/TrackballControls.js"></script>
+        
+        <script type="text/javascript" src="js1/flights_one.js"></script>
+        <script type="text/javascript" src="js1/app.js"></script>
+        
+        <script type="x-shader/x-vertex" id="vertexshader">
+            attribute float size;
+            attribute vec3 customColor;
+
+            varying vec3 vColor;
+
+            void main() {
+                vColor = customColor;
+                vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+                gl_PointSize = size * ( 300.0 / length( mvPosition.xyz ) );
+                gl_Position = projectionMatrix * mvPosition;
+            }
+        </script>
+        <script type="x-shader/x-fragment" id="fragmentshader">
+            uniform vec3 color;
+            uniform sampler2D texture;
+
+            varying vec3 vColor;
+
+            void main() {
+                gl_FragColor = vec4( color * vColor, 0.5 );
+                gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord );
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", start_app, false);
+        </script>
+        
+        <div id="loading_overlay" class="hide"><img width="400" height="400" id="loading_overlay_img" src="images/loading.svg"></div>
+
+    </body>
+</html>
