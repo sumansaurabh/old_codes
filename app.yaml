@@ -1,5 +1,5 @@
 application: suman-saurabh
-version: 1
+version: 2
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -7,21 +7,45 @@ threadsafe: true
 
 
 handlers:
-- url: /(.+\.(css|js))$
-  static_files: \1
-  upload: .+\.(css|js)$
-  application_readable: true
+- url: /css
+  static_dir: static/css
+
+- url: /js
+  static_dir: static/js
+
+- url: /images
+  static_dir: static/images
+
+- url: /img
+  static_dir: static/img
+
+- url: /vendor
+  static_dir: static/vendor
+
+- url: /others
+  static_dir: static/others
+
+- url: /template
+  static_dir: static/template
+
+- url: /blogs
+  static_dir: static/blogs
+
+# - url: /(.+\.(css|js))$
+#   static_files: static
+#   upload: static/.+\.(css|js)$
+#   application_readable: true
 
 
-- url: /(.+\.(jpg|png|jpeg))$
-  static_files: \1
-  upload: .+\.(jpg|png|jpeg)$
-  application_readable: true
+# - url: /(.+\.(jpg|png|jpeg))$
+#   static_files: static
+#   upload: static/.+\.(jpg|png|jpeg)$
+#   application_readable: true
 
-- url: /(.+\.(svg|eot|ttf|woff|html|pdf))$
-  static_files: \1
-  upload: .+\.(svg|eot|ttf|woff|html|pdf)$
-  application_readable: true
+# - url: /(.+\.(svg|eot|ttf|woff|html|pdf))$
+#   static_files: static
+#   upload: static/.+\.(svg|eot|ttf|woff|html|pdf)$
+#   application_readable: true
 
 - url: /_ah/mail/info@.*suman-saurabh\.appspotmail\.com
   script: mailredirector.application
@@ -41,3 +65,14 @@ libraries:
   version: latest
 - name: jinja2
   version: latest
+
+
+skip_files:
+- static/node_modules/*.*
+- static/package-lock.json
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*\.scss$
+- ^(.*/)?.*\.less$
+
+
+

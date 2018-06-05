@@ -1,0 +1,3014 @@
+@import "https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+/* line 1, scss/_global.scss */
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 7, scss/_global.scss */
+body {
+  font-family: 'Source Sans Pro';
+}
+
+/* line 12, scss/_global.scss */
+.btn-xl {
+  padding: 1.25rem 2.5rem;
+}
+
+/* line 17, scss/_global.scss */
+.content-section {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+/* line 23, scss/_global.scss */
+.content-section-heading h2 {
+  font-size: 3rem;
+}
+
+/* line 26, scss/_global.scss */
+.content-section-heading h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* line 33, scss/_global.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* line 42, scss/_global.scss */
+.text-faded {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Map */
+/* line 48, scss/_global.scss */
+.map {
+  height: 30rem;
+}
+
+@media (max-width: 992px) {
+  /* line 53, scss/_global.scss */
+  .map {
+    height: 75%;
+  }
+}
+
+/* line 58, scss/_global.scss */
+.map iframe {
+  pointer-events: none;
+}
+
+/* line 63, scss/_global.scss */
+.scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 45px;
+}
+
+/* line 79, scss/_global.scss */
+.scroll-to-top:focus, .scroll-to-top:hover {
+  color: white;
+}
+
+/* line 83, scss/_global.scss */
+.scroll-to-top:hover {
+  background: #343a40;
+}
+
+/* line 86, scss/_global.scss */
+.scroll-to-top i {
+  font-weight: 800;
+}
+
+/* line 1, scss/_masthead.scss */
+.masthead {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/12001.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20;
+  align-items: center;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 13, scss/_masthead.scss */
+.masthead h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  /* line 1, scss/_masthead.scss */
+  .masthead {
+    height: 100vh;
+  }
+  /* line 20, scss/_masthead.scss */
+  .masthead h1 {
+    font-size: 5rem;
+  }
+}
+
+/* line 35, scss/_masthead.scss */
+.hr-head {
+  border: 2px solid #989B98;
+  width: 10%;
+}
+
+/* line 40, scss/_masthead.scss */
+.masthead-content {
+  text-align: center;
+  margin-left: 15%;
+  padding-top: 20px;
+  font-size: 20px;
+  background-color: white;
+  width: 70%;
+}
+
+/* line 47, scss/_masthead.scss */
+.masthead-content p {
+  margin: 0px;
+}
+
+/* line 53, scss/_masthead.scss */
+.container {
+  transition: 1.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 59, scss/_masthead.scss */
+.container:hover {
+  /*-webkit-transform: translateX( 120% ) rotateY( 180deg );
+  transform: translateX( 120% ) rotateY( 180deg );*/
+}
+
+/* line 66, scss/_masthead.scss */
+.masthead-links {
+  padding-top: 20px;
+}
+
+/* line 69, scss/_masthead.scss */
+.masthead-links button {
+  margin-right: 5px;
+}
+
+/* line 73, scss/_masthead.scss */
+.masthead-links .btn-primary-head {
+  color: #2E70B9;
+  background-color: #ffffff;
+  border-color: #2E70B9;
+}
+
+/* line 80, scss/_masthead.scss */
+.masthead-links-2 {
+  position: fixed;
+  width: 60px;
+  -webkit-transform-origin: 0% 0%;
+  text-align: center;
+  margin-left: -1px;
+  top: 34.5%;
+  z-index: 20;
+}
+
+/* line 89, scss/_masthead.scss */
+.masthead-links-2 p {
+  color: white;
+}
+
+/* line 92, scss/_masthead.scss */
+.masthead-links-2 .side-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  background-color: black;
+}
+
+/* line 97, scss/_masthead.scss */
+.masthead-links-2 .side-button i {
+  font-size: 300%;
+}
+
+/* line 100, scss/_masthead.scss */
+.masthead-links-2 .side-button i:hover {
+  font-size: 400%;
+}
+
+/* line 106, scss/_masthead.scss */
+ul.page-navigation {
+  list-style-type: none;
+}
+
+/* line 111, scss/_masthead.scss */
+.page-navigation {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4em;
+  z-index: 10;
+}
+
+/* line 121, scss/_masthead.scss */
+.page-navigation a {
+  display: block;
+  height: 20px;
+  margin-bottom: 5px;
+  color: black;
+  position: relative;
+  padding: 4px;
+}
+
+/* line 129, scss/_masthead.scss */
+.page-navigation a .hover-text {
+  position: absolute;
+  right: 15px;
+  top: -8px;
+  opacity: 0;
+  color: black;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  padding-right: 15px;
+}
+
+/* line 141, scss/_masthead.scss */
+.page-navigation a:hover, .page-navigation a:focus, .page-navigation a:active {
+  color: black;
+}
+
+/* line 145, scss/_masthead.scss */
+.page-navigation a.active:after {
+  box-shadow: inset 0 0 0 5px;
+}
+
+/* line 149, scss/_masthead.scss */
+.page-navigation a:hover .hover-text {
+  opacity: 1;
+}
+
+/* line 153, scss/_masthead.scss */
+.page-navigation a:after {
+  -webkit-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border: 1px solid;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 4px;
+  bottom: 0;
+}
+
+/*#three-container {
+    position: absolute;
+    top: 8%;
+    left: 24%;
+}*/
+/* line 177, scss/_masthead.scss */
+.masthead-links-tree {
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 20;
+}
+
+@media only screen and (max-width: 1025px) {
+  /* line 186, scss/_masthead.scss */
+  .masthead-links-tree {
+    display: none;
+  }
+}
+
+/* line 191, scss/_masthead.scss */
+canvas {
+  z-index: -1;
+  top: 0;
+  position: fixed;
+}
+
+/* line 197, scss/_masthead.scss */
+article {
+  z-index: 20;
+  background-color: white;
+}
+
+/*
+* @Author: sumansaurabh
+* @Date:   2018-05-01 22:40:28
+* @Last Modified by:   sumansaurabh
+* @Last Modified time: 2018-05-02 02:17:48
+*/
+/* line 8, scss/_contact.scss */
+#contact-form {
+  /*display: none;*/
+  margin-left: 20%;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+/* line 10, scss/_contact.scss */
+#contact-form .slant-container {
+  position: relative;
+  display: inline-block;
+  padding: 1em 5em 1em 1em;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 15px 0px 0px 15px;
+}
+
+/* line 18, scss/_contact.scss */
+#contact-form .slant-container img {
+  border-radius: 50%;
+  width: 25%;
+  margin-left: -65%;
+  margin-top: 20%;
+}
+
+/* line 25, scss/_contact.scss */
+#contact-form .slant-container .contact-details {
+  text-align: left !important;
+  margin-top: 10%;
+  font-size: 110%;
+  margin-left: 5%;
+}
+
+/* line 33, scss/_contact.scss */
+#contact-form .slant-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+  transform: skew(-15deg);
+  z-index: -1;
+}
+
+/* line 56, scss/_contact.scss */
+#contact-form form {
+  text-align: center;
+}
+
+/* line 60, scss/_contact.scss */
+#contact-form label {
+  display: block;
+  letter-spacing: 4px;
+  padding-top: 5%;
+  text-align: center;
+  background-color: white;
+  z-index: 20;
+}
+
+/* line 68, scss/_contact.scss */
+#contact-form label .label-text {
+  color: #9B9B9B;
+  cursor: text;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transform: translateY(-160%);
+  transition: all 0.3s;
+}
+
+/* line 78, scss/_contact.scss */
+#contact-form label input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #4A4A4A;
+  color: black;
+  font-size: 30px;
+  leter-spacing: -1px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 80%;
+}
+
+/* line 92, scss/_contact.scss */
+#contact-form label input:focus {
+  width: 95%;
+}
+
+/* line 96, scss/_contact.scss */
+#contact-form label input:focus + .label-text {
+  color: #F0F0F0;
+  font-size: 13px;
+  transform: translateY(-74px);
+}
+
+/* line 102, scss/_contact.scss */
+#contact-form label input:valid + .label-text {
+  font-size: 13px;
+  transform: translateY(-74px);
+}
+
+/* line 109, scss/_contact.scss */
+#contact-form label textarea {
+  background-color: transparent;
+  border: 0;
+  border: 2px solid #4A4A4A;
+  color: black;
+  font-size: 36px;
+  leter-spacing: -1px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 80%;
+  height: 200px;
+}
+
+/* line 124, scss/_contact.scss */
+#contact-form label textarea:focus {
+  width: 95%;
+}
+
+/* line 128, scss/_contact.scss */
+#contact-form label textarea:focus + .label-text {
+  color: #F0F0F0;
+  font-size: 13px;
+  transform: translateY(-74px);
+}
+
+/* line 134, scss/_contact.scss */
+#contact-form label textarea:valid + .label-text {
+  font-size: 13px;
+  transform: translateY(-74px);
+}
+
+/* line 140, scss/_contact.scss */
+#contact-form .close-btn {
+  position: absolute;
+  right: 0%;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 0px 15px 0px 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  /*padding: 15px 30px;*/
+  /*margin-top: -10px;*/
+  text-transform: uppercase;
+  transition: all 200ms;
+}
+
+/* line 155, scss/_contact.scss */
+#contact-form .close-btn:hover {
+  font-size: 40px;
+}
+
+/* line 160, scss/_contact.scss */
+#contact-form .submit-btn {
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 27px;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px 30px;
+  /*margin-top: -10px;*/
+  text-transform: uppercase;
+  transition: all 200ms;
+}
+
+/* line 172, scss/_contact.scss */
+#contact-form .submit-btn:hover, #contact-form .submit-btn:focus {
+  background-color: black;
+  /*border-color: black;*/
+  color: white;
+  outline: 0;
+}
+
+/* line 1, scss/_scrambler.scss */
+.soup-title {
+  font-size: 16px;
+}
+
+/* line 4, scss/_scrambler.scss */
+.soup-desc {
+  font-size: 16px;
+}
+
+/* line 8, scss/_scrambler.scss */
+#soup-container {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: 480px;
+  position: relative;
+}
+
+/* line 15, scss/_scrambler.scss */
+.letters-wrap {
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 20, scss/_scrambler.scss */
+.letters-wrap.mutable {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 25, scss/_scrambler.scss */
+.letters-wrap.mutable .letter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 2s, top 2s, color 2s;
+  color: "#AAA";
+}
+
+/* line 31, scss/_scrambler.scss */
+.letters-wrap.mutable .letter.active {
+  color: "#111";
+  z-index: 9001;
+}
+
+/* line 37, scss/_scrambler.scss */
+.letters-wrap.position-data {
+  top: 50%;
+  left: 50%;
+  /*opacity: 0.1;*/
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+}
+
+/* line 46, scss/_scrambler.scss */
+.segment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 53, scss/_scrambler.scss */
+.letter {
+  /*display: inline-block;*/
+}
+
+/* Side Menu */
+/* line 3, scss/_sidebar.scss */
+#sidebar-wrapper {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  transform: translateX(250px);
+  background: #1D809F;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* line 19, scss/_sidebar.scss */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 31, scss/_sidebar.scss */
+.sidebar-nav li.sidebar-nav-item a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px;
+}
+
+/* line 38, scss/_sidebar.scss */
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 44, scss/_sidebar.scss */
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+/* line 49, scss/_sidebar.scss */
+.sidebar-nav > .sidebar-brand {
+  font-size: 1.2rem;
+  background: rgba(52, 58, 64, 0.1);
+  height: 80px;
+  line-height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+/* line 59, scss/_sidebar.scss */
+.sidebar-nav > .sidebar-brand a {
+  color: #fff;
+}
+
+/* line 63, scss/_sidebar.scss */
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+/* line 68, scss/_sidebar.scss */
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+/* line 78, scss/_sidebar.scss */
+.menu-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 50px;
+  z-index: 999;
+}
+
+/* line 94, scss/_sidebar.scss */
+.menu-toggle:focus, .menu-toggle:hover {
+  color: #fff;
+}
+
+/* line 98, scss/_sidebar.scss */
+.menu-toggle:hover {
+  background: #343a40;
+}
+
+/* line 1, scss/_services.scss */
+.service-icon {
+  background-color: #fff;
+  color: #1D809F;
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  line-height: 7.5rem;
+  font-size: 2.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 2, scss/_callout.scss */
+.callout {
+  padding: 15rem 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-callout.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 8, scss/_callout.scss */
+.callout h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: block;
+  max-width: 30rem;
+}
+
+/* line 1, scss/_portfolio.scss */
+.portfolio-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+}
+
+/* line 7, scss/_portfolio.scss */
+.portfolio-item .caption {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 37, 41, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* line 16, scss/_portfolio.scss */
+.portfolio-item .caption .caption-content {
+  color: #fff;
+  margin: auto 2rem 2rem;
+}
+
+/* line 19, scss/_portfolio.scss */
+.portfolio-item .caption .caption-content h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* line 23, scss/_portfolio.scss */
+.portfolio-item .caption .caption-content p {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 992px) {
+  /* line 1, scss/_portfolio.scss */
+  .portfolio-item {
+    max-width: none;
+    margin: 0;
+  }
+  /* line 32, scss/_portfolio.scss */
+  .portfolio-item .caption {
+    -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
+    -webkit-clip-path: inset(0px);
+    clip-path: inset(0px);
+  }
+  /* line 36, scss/_portfolio.scss */
+  .portfolio-item .caption .caption-content {
+    transition: opacity 0.25s;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+  }
+  /* line 43, scss/_portfolio.scss */
+  .portfolio-item img {
+    -webkit-transition: -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+  }
+  /* line 49, scss/_portfolio.scss */
+  .portfolio-item:hover img {
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+  }
+  /* line 53, scss/_portfolio.scss */
+  .portfolio-item:hover .caption {
+    background-color: rgba(29, 128, 159, 0.9);
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+  }
+}
+
+/* line 1, scss/_footer.scss */
+footer.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* line 4, scss/_footer.scss */
+footer.footer .social-link {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4.3rem;
+  font-size: 1.5rem;
+  background-color: #1D809F;
+  transition: background-color 0.15s ease-in-out;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 13, scss/_footer.scss */
+footer.footer .social-link:hover {
+  background-color: #155d74;
+  text-decoration: none;
+}
+
+/* line 1, scss/_bootstrap-overrides.scss */
+a {
+  color: #1D809F;
+}
+
+/* line 3, scss/_bootstrap-overrides.scss */
+a:hover, a:focus, a:active {
+  color: #155d74;
+}
+
+/* line 10, scss/_bootstrap-overrides.scss */
+.btn-primary {
+  background-color: #1D809F !important;
+  border-color: #1D809F !important;
+  color: #fff !important;
+}
+
+/* line 14, scss/_bootstrap-overrides.scss */
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #155d74 !important;
+  border-color: #155d74 !important;
+}
+
+/* line 22, scss/_bootstrap-overrides.scss */
+.btn-secondary {
+  background-color: #ecb807 !important;
+  border-color: #ecb807 !important;
+  color: #fff !important;
+}
+
+/* line 26, scss/_bootstrap-overrides.scss */
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  background-color: #ba9106 !important;
+  border-color: #ba9106 !important;
+}
+
+/* line 34, scss/_bootstrap-overrides.scss */
+.btn-dark {
+  color: #fff !important;
+}
+
+/* line 38, scss/_bootstrap-overrides.scss */
+.btn {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+
+/* line 43, scss/_bootstrap-overrides.scss */
+.bg-primary {
+  background-color: #1D809F !important;
+}
+
+/* line 47, scss/_bootstrap-overrides.scss */
+.text-primary {
+  color: #1D809F !important;
+}
+
+/* line 51, scss/_bootstrap-overrides.scss */
+.text-secondary {
+  color: #ecb807 !important;
+}
+
+/* line 2, scss/_material_theme.scss */
+.fa-spin-fast {
+  -webkit-animation: fa-spin-fast 0.2s infinite linear;
+  animation: fa-spin-fast 0.2s infinite linear;
+}
+
+@-webkit-keyframes fa-spin-fast {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes fa-spin-fast {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+/* line 26, scss/_material_theme.scss */
+.material-card {
+  position: relative;
+  height: 0;
+  padding-bottom: calc(100% - 16px);
+  margin-bottom: 6.6em;
+}
+
+/* line 32, scss/_material_theme.scss */
+.material-card h2 {
+  position: absolute;
+  top: calc(100% - 16px);
+  left: 0;
+  width: 100%;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 1.4em;
+  line-height: 1.6em;
+  margin: 0;
+  z-index: 10;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 49, scss/_material_theme.scss */
+.material-card h2 span {
+  display: block;
+}
+
+/* line 52, scss/_material_theme.scss */
+.material-card h2 strong {
+  font-weight: 400;
+  display: block;
+  font-size: .8em;
+}
+
+/* line 57, scss/_material_theme.scss */
+.material-card h2:before,
+.material-card h2:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: -16px;
+  width: 0;
+  border: 8px solid;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 71, scss/_material_theme.scss */
+.material-card h2:after {
+  top: auto;
+  bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 76, scss/_material_theme.scss */
+  .material-card.mc-active {
+    padding-bottom: 0;
+    height: auto;
+  }
+}
+
+/* line 81, scss/_material_theme.scss */
+.material-card.mc-active h2 {
+  top: 0;
+  padding: 10px 16px 10px 90px;
+}
+
+/* line 85, scss/_material_theme.scss */
+.material-card.mc-active h2:before {
+  top: 0;
+}
+
+/* line 88, scss/_material_theme.scss */
+.material-card.mc-active h2:after {
+  bottom: -16px;
+}
+
+/* line 91, scss/_material_theme.scss */
+.material-card .mc-content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 16px;
+  left: 16px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 103, scss/_material_theme.scss */
+.material-card .mc-btn-action {
+  position: absolute;
+  right: 16px;
+  top: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid;
+  width: 54px;
+  height: 54px;
+  line-height: 44px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  z-index: 20;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 124, scss/_material_theme.scss */
+.material-card.mc-active .mc-btn-action {
+  top: 62px;
+}
+
+/* line 127, scss/_material_theme.scss */
+.material-card .mc-description {
+  position: absolute;
+  top: 100%;
+  right: 30px;
+  left: 30px;
+  bottom: 54px;
+  overflow: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 1.2s;
+  -moz-transition: all 1.2s;
+  -ms-transition: all 1.2s;
+  -o-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+/* line 142, scss/_material_theme.scss */
+.material-card .mc-footer {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 151, scss/_material_theme.scss */
+.material-card .mc-footer h4 {
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: all 1.4s;
+  -moz-transition: all 1.4s;
+  -ms-transition: all 1.4s;
+  -o-transition: all 1.4s;
+  transition: all 1.4s;
+}
+
+/* line 165, scss/_material_theme.scss */
+.material-card .mc-footer a {
+  display: block;
+  float: left;
+  position: relative;
+  width: 52px;
+  height: 52px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #fff;
+  line-height: 52px;
+  text-decoration: none;
+  top: 200px;
+}
+
+/* line 179, scss/_material_theme.scss */
+.material-card .mc-footer a:nth-child(1) {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* line 186, scss/_material_theme.scss */
+.material-card .mc-footer a:nth-child(2) {
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+/* line 193, scss/_material_theme.scss */
+.material-card .mc-footer a:nth-child(3) {
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+/* line 200, scss/_material_theme.scss */
+.material-card .mc-footer a:nth-child(4) {
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+/* line 207, scss/_material_theme.scss */
+.material-card .mc-footer a:nth-child(5) {
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
+  -ms-transition: all 0.9s;
+  -o-transition: all 0.9s;
+  transition: all 0.9s;
+}
+
+/* line 214, scss/_material_theme.scss */
+.material-card .img-container {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 228, scss/_material_theme.scss */
+.material-card.mc-active .img-container {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  left: 0;
+  top: 12px;
+  width: 60px;
+  height: 60px;
+  z-index: 20;
+}
+
+/* line 238, scss/_material_theme.scss */
+.material-card.mc-active .mc-content {
+  padding-top: 5.6em;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 242, scss/_material_theme.scss */
+  .material-card.mc-active .mc-content {
+    position: relative;
+    margin-right: 16px;
+  }
+}
+
+/* line 247, scss/_material_theme.scss */
+.material-card.mc-active .mc-description {
+  top: 50px;
+  padding-top: 5.6em;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+@media screen and (max-width: 767px) {
+  /* line 254, scss/_material_theme.scss */
+  .material-card.mc-active .mc-description {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    padding: 50px 30px 70px 30px;
+    bottom: 0;
+  }
+}
+
+/* line 263, scss/_material_theme.scss */
+.material-card.mc-active .mc-footer {
+  overflow: visible;
+  position: absolute;
+  top: calc(100% - 16px);
+  left: 16px;
+  right: 0;
+  height: 82px;
+  padding-top: 15px;
+  padding-left: 25px;
+}
+
+/* line 273, scss/_material_theme.scss */
+.material-card.mc-active .mc-footer a {
+  top: 0;
+}
+
+/* line 276, scss/_material_theme.scss */
+.material-card.mc-active .mc-footer h4 {
+  top: -32px;
+}
+
+/* line 279, scss/_material_theme.scss */
+.material-card.Red h2 {
+  background-color: #F44336;
+}
+
+/* line 282, scss/_material_theme.scss */
+.material-card.Red h2:after {
+  border-top-color: #F44336;
+  border-right-color: #F44336;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 288, scss/_material_theme.scss */
+.material-card.Red h2:before {
+  border-top-color: transparent;
+  border-right-color: #B71C1C;
+  border-bottom-color: #B71C1C;
+  border-left-color: transparent;
+}
+
+/* line 294, scss/_material_theme.scss */
+.material-card.Red.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #F44336;
+  border-bottom-color: #F44336;
+  border-left-color: transparent;
+}
+
+/* line 300, scss/_material_theme.scss */
+.material-card.Red.mc-active h2:after {
+  border-top-color: #B71C1C;
+  border-right-color: #B71C1C;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 306, scss/_material_theme.scss */
+.material-card.Red .mc-btn-action {
+  background-color: #F44336;
+}
+
+/* line 309, scss/_material_theme.scss */
+.material-card.Red .mc-btn-action:hover {
+  background-color: #B71C1C;
+}
+
+/* line 312, scss/_material_theme.scss */
+.material-card.Red .mc-footer h4 {
+  color: #B71C1C;
+}
+
+/* line 315, scss/_material_theme.scss */
+.material-card.Red .mc-footer a {
+  background-color: #B71C1C;
+}
+
+/* line 318, scss/_material_theme.scss */
+.material-card.Red.mc-active .mc-content {
+  background-color: #FFEBEE;
+}
+
+/* line 321, scss/_material_theme.scss */
+.material-card.Red.mc-active .mc-footer {
+  background-color: #FFCDD2;
+}
+
+/* line 324, scss/_material_theme.scss */
+.material-card.Red.mc-active .mc-btn-action {
+  border-color: #FFEBEE;
+}
+
+/* line 327, scss/_material_theme.scss */
+.material-card.Blue-Grey h2 {
+  background-color: #607D8B;
+}
+
+/* line 330, scss/_material_theme.scss */
+.material-card.Blue-Grey h2:after {
+  border-top-color: #607D8B;
+  border-right-color: #607D8B;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 336, scss/_material_theme.scss */
+.material-card.Blue-Grey h2:before {
+  border-top-color: transparent;
+  border-right-color: #263238;
+  border-bottom-color: #263238;
+  border-left-color: transparent;
+}
+
+/* line 342, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #607D8B;
+  border-bottom-color: #607D8B;
+  border-left-color: transparent;
+}
+
+/* line 348, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active h2:after {
+  border-top-color: #263238;
+  border-right-color: #263238;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 354, scss/_material_theme.scss */
+.material-card.Blue-Grey .mc-btn-action {
+  background-color: #607D8B;
+}
+
+/* line 357, scss/_material_theme.scss */
+.material-card.Blue-Grey .mc-btn-action:hover {
+  background-color: #263238;
+}
+
+/* line 360, scss/_material_theme.scss */
+.material-card.Blue-Grey .mc-footer h4 {
+  color: #263238;
+}
+
+/* line 363, scss/_material_theme.scss */
+.material-card.Blue-Grey .mc-footer a {
+  background-color: #263238;
+}
+
+/* line 366, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active .mc-content {
+  background-color: #ECEFF1;
+}
+
+/* line 369, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active .mc-footer {
+  background-color: #CFD8DC;
+}
+
+/* line 372, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active .mc-btn-action {
+  border-color: #ECEFF1;
+}
+
+/* line 375, scss/_material_theme.scss */
+.material-card.Pink h2 {
+  background-color: #E91E63;
+}
+
+/* line 378, scss/_material_theme.scss */
+.material-card.Pink h2:after {
+  border-top-color: #E91E63;
+  border-right-color: #E91E63;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 384, scss/_material_theme.scss */
+.material-card.Pink h2:before {
+  border-top-color: transparent;
+  border-right-color: #880E4F;
+  border-bottom-color: #880E4F;
+  border-left-color: transparent;
+}
+
+/* line 390, scss/_material_theme.scss */
+.material-card.Pink.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #E91E63;
+  border-bottom-color: #E91E63;
+  border-left-color: transparent;
+}
+
+/* line 396, scss/_material_theme.scss */
+.material-card.Pink.mc-active h2:after {
+  border-top-color: #880E4F;
+  border-right-color: #880E4F;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 402, scss/_material_theme.scss */
+.material-card.Pink .mc-btn-action {
+  background-color: #E91E63;
+}
+
+/* line 405, scss/_material_theme.scss */
+.material-card.Pink .mc-btn-action:hover {
+  background-color: #880E4F;
+}
+
+/* line 408, scss/_material_theme.scss */
+.material-card.Pink .mc-footer h4 {
+  color: #880E4F;
+}
+
+/* line 411, scss/_material_theme.scss */
+.material-card.Pink .mc-footer a {
+  background-color: #880E4F;
+}
+
+/* line 414, scss/_material_theme.scss */
+.material-card.Pink.mc-active .mc-content {
+  background-color: #FCE4EC;
+}
+
+/* line 417, scss/_material_theme.scss */
+.material-card.Pink.mc-active .mc-footer {
+  background-color: #F8BBD0;
+}
+
+/* line 420, scss/_material_theme.scss */
+.material-card.Pink.mc-active .mc-btn-action {
+  border-color: #FCE4EC;
+}
+
+/* line 423, scss/_material_theme.scss */
+.material-card.Purple h2 {
+  background-color: #9C27B0;
+}
+
+/* line 426, scss/_material_theme.scss */
+.material-card.Purple h2:after {
+  border-top-color: #9C27B0;
+  border-right-color: #9C27B0;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 432, scss/_material_theme.scss */
+.material-card.Purple h2:before {
+  border-top-color: transparent;
+  border-right-color: #4A148C;
+  border-bottom-color: #4A148C;
+  border-left-color: transparent;
+}
+
+/* line 438, scss/_material_theme.scss */
+.material-card.Purple.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #9C27B0;
+  border-bottom-color: #9C27B0;
+  border-left-color: transparent;
+}
+
+/* line 444, scss/_material_theme.scss */
+.material-card.Purple.mc-active h2:after {
+  border-top-color: #4A148C;
+  border-right-color: #4A148C;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 450, scss/_material_theme.scss */
+.material-card.Purple .mc-btn-action {
+  background-color: #9C27B0;
+}
+
+/* line 453, scss/_material_theme.scss */
+.material-card.Purple .mc-btn-action:hover {
+  background-color: #4A148C;
+}
+
+/* line 456, scss/_material_theme.scss */
+.material-card.Purple .mc-footer h4 {
+  color: #4A148C;
+}
+
+/* line 459, scss/_material_theme.scss */
+.material-card.Purple .mc-footer a {
+  background-color: #4A148C;
+}
+
+/* line 462, scss/_material_theme.scss */
+.material-card.Purple.mc-active .mc-content {
+  background-color: #F3E5F5;
+}
+
+/* line 465, scss/_material_theme.scss */
+.material-card.Purple.mc-active .mc-footer {
+  background-color: #E1BEE7;
+}
+
+/* line 468, scss/_material_theme.scss */
+.material-card.Purple.mc-active .mc-btn-action {
+  border-color: #F3E5F5;
+}
+
+/* line 471, scss/_material_theme.scss */
+.material-card.Deep-Purple h2 {
+  background-color: #673AB7;
+}
+
+/* line 474, scss/_material_theme.scss */
+.material-card.Deep-Purple h2:after {
+  border-top-color: #673AB7;
+  border-right-color: #673AB7;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 480, scss/_material_theme.scss */
+.material-card.Deep-Purple h2:before {
+  border-top-color: transparent;
+  border-right-color: #311B92;
+  border-bottom-color: #311B92;
+  border-left-color: transparent;
+}
+
+/* line 486, scss/_material_theme.scss */
+.material-card.Deep-Purple.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #673AB7;
+  border-bottom-color: #673AB7;
+  border-left-color: transparent;
+}
+
+/* line 492, scss/_material_theme.scss */
+.material-card.Deep-Purple.mc-active h2:after {
+  border-top-color: #311B92;
+  border-right-color: #311B92;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 498, scss/_material_theme.scss */
+.material-card.Deep-Purple .mc-btn-action {
+  background-color: #673AB7;
+}
+
+/* line 501, scss/_material_theme.scss */
+.material-card.Deep-Purple .mc-btn-action:hover {
+  background-color: #311B92;
+}
+
+/* line 504, scss/_material_theme.scss */
+.material-card.Deep-Purple .mc-footer h4 {
+  color: #311B92;
+}
+
+/* line 507, scss/_material_theme.scss */
+.material-card.Deep-Purple .mc-footer a {
+  background-color: #311B92;
+}
+
+/* line 510, scss/_material_theme.scss */
+.material-card.Deep-Purple.mc-active .mc-content {
+  background-color: #EDE7F6;
+}
+
+/* line 513, scss/_material_theme.scss */
+.material-card.Deep-Purple.mc-active .mc-footer {
+  background-color: #D1C4E9;
+}
+
+/* line 516, scss/_material_theme.scss */
+.material-card.Deep-Purple.mc-active .mc-btn-action {
+  border-color: #EDE7F6;
+}
+
+/* line 519, scss/_material_theme.scss */
+.material-card.Indigo h2 {
+  background-color: #3F51B5;
+}
+
+/* line 522, scss/_material_theme.scss */
+.material-card.Indigo h2:after {
+  border-top-color: #3F51B5;
+  border-right-color: #3F51B5;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 528, scss/_material_theme.scss */
+.material-card.Indigo h2:before {
+  border-top-color: transparent;
+  border-right-color: #1A237E;
+  border-bottom-color: #1A237E;
+  border-left-color: transparent;
+}
+
+/* line 534, scss/_material_theme.scss */
+.material-card.Indigo.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #3F51B5;
+  border-bottom-color: #3F51B5;
+  border-left-color: transparent;
+}
+
+/* line 540, scss/_material_theme.scss */
+.material-card.Indigo.mc-active h2:after {
+  border-top-color: #1A237E;
+  border-right-color: #1A237E;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 546, scss/_material_theme.scss */
+.material-card.Indigo .mc-btn-action {
+  background-color: #3F51B5;
+}
+
+/* line 549, scss/_material_theme.scss */
+.material-card.Indigo .mc-btn-action:hover {
+  background-color: #1A237E;
+}
+
+/* line 552, scss/_material_theme.scss */
+.material-card.Indigo .mc-footer h4 {
+  color: #1A237E;
+}
+
+/* line 555, scss/_material_theme.scss */
+.material-card.Indigo .mc-footer a {
+  background-color: #1A237E;
+}
+
+/* line 558, scss/_material_theme.scss */
+.material-card.Indigo.mc-active .mc-content {
+  background-color: #E8EAF6;
+}
+
+/* line 561, scss/_material_theme.scss */
+.material-card.Indigo.mc-active .mc-footer {
+  background-color: #C5CAE9;
+}
+
+/* line 564, scss/_material_theme.scss */
+.material-card.Indigo.mc-active .mc-btn-action {
+  border-color: #E8EAF6;
+}
+
+/* line 567, scss/_material_theme.scss */
+.material-card.Blue h2 {
+  background-color: #2196F3;
+}
+
+/* line 570, scss/_material_theme.scss */
+.material-card.Blue h2:after {
+  border-top-color: #2196F3;
+  border-right-color: #2196F3;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 576, scss/_material_theme.scss */
+.material-card.Blue h2:before {
+  border-top-color: transparent;
+  border-right-color: #0D47A1;
+  border-bottom-color: #0D47A1;
+  border-left-color: transparent;
+}
+
+/* line 582, scss/_material_theme.scss */
+.material-card.Blue.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #2196F3;
+  border-bottom-color: #2196F3;
+  border-left-color: transparent;
+}
+
+/* line 588, scss/_material_theme.scss */
+.material-card.Blue.mc-active h2:after {
+  border-top-color: #0D47A1;
+  border-right-color: #0D47A1;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 594, scss/_material_theme.scss */
+.material-card.Blue .mc-btn-action {
+  background-color: #2196F3;
+}
+
+/* line 597, scss/_material_theme.scss */
+.material-card.Blue .mc-btn-action:hover {
+  background-color: #0D47A1;
+}
+
+/* line 600, scss/_material_theme.scss */
+.material-card.Blue .mc-footer h4 {
+  color: #0D47A1;
+}
+
+/* line 603, scss/_material_theme.scss */
+.material-card.Blue .mc-footer a {
+  background-color: #0D47A1;
+}
+
+/* line 606, scss/_material_theme.scss */
+.material-card.Blue.mc-active .mc-content {
+  background-color: #E3F2FD;
+}
+
+/* line 609, scss/_material_theme.scss */
+.material-card.Blue.mc-active .mc-footer {
+  background-color: #BBDEFB;
+}
+
+/* line 612, scss/_material_theme.scss */
+.material-card.Blue.mc-active .mc-btn-action {
+  border-color: #E3F2FD;
+}
+
+/* line 615, scss/_material_theme.scss */
+.material-card.Light-Blue h2 {
+  background-color: #03A9F4;
+}
+
+/* line 618, scss/_material_theme.scss */
+.material-card.Light-Blue h2:after {
+  border-top-color: #03A9F4;
+  border-right-color: #03A9F4;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 624, scss/_material_theme.scss */
+.material-card.Light-Blue h2:before {
+  border-top-color: transparent;
+  border-right-color: #01579B;
+  border-bottom-color: #01579B;
+  border-left-color: transparent;
+}
+
+/* line 630, scss/_material_theme.scss */
+.material-card.Light-Blue.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #03A9F4;
+  border-bottom-color: #03A9F4;
+  border-left-color: transparent;
+}
+
+/* line 636, scss/_material_theme.scss */
+.material-card.Light-Blue.mc-active h2:after {
+  border-top-color: #01579B;
+  border-right-color: #01579B;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 642, scss/_material_theme.scss */
+.material-card.Light-Blue .mc-btn-action {
+  background-color: #03A9F4;
+}
+
+/* line 645, scss/_material_theme.scss */
+.material-card.Light-Blue .mc-btn-action:hover {
+  background-color: #01579B;
+}
+
+/* line 648, scss/_material_theme.scss */
+.material-card.Light-Blue .mc-footer h4 {
+  color: #01579B;
+}
+
+/* line 651, scss/_material_theme.scss */
+.material-card.Light-Blue .mc-footer a {
+  background-color: #01579B;
+}
+
+/* line 654, scss/_material_theme.scss */
+.material-card.Light-Blue.mc-active .mc-content {
+  background-color: #E1F5FE;
+}
+
+/* line 657, scss/_material_theme.scss */
+.material-card.Light-Blue.mc-active .mc-footer {
+  background-color: #B3E5FC;
+}
+
+/* line 660, scss/_material_theme.scss */
+.material-card.Light-Blue.mc-active .mc-btn-action {
+  border-color: #E1F5FE;
+}
+
+/* line 663, scss/_material_theme.scss */
+.material-card.Cyan h2 {
+  background-color: #00BCD4;
+}
+
+/* line 666, scss/_material_theme.scss */
+.material-card.Cyan h2:after {
+  border-top-color: #00BCD4;
+  border-right-color: #00BCD4;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 672, scss/_material_theme.scss */
+.material-card.Cyan h2:before {
+  border-top-color: transparent;
+  border-right-color: #006064;
+  border-bottom-color: #006064;
+  border-left-color: transparent;
+}
+
+/* line 678, scss/_material_theme.scss */
+.material-card.Cyan.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #00BCD4;
+  border-bottom-color: #00BCD4;
+  border-left-color: transparent;
+}
+
+/* line 684, scss/_material_theme.scss */
+.material-card.Cyan.mc-active h2:after {
+  border-top-color: #006064;
+  border-right-color: #006064;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 690, scss/_material_theme.scss */
+.material-card.Cyan .mc-btn-action {
+  background-color: #00BCD4;
+}
+
+/* line 693, scss/_material_theme.scss */
+.material-card.Cyan .mc-btn-action:hover {
+  background-color: #006064;
+}
+
+/* line 696, scss/_material_theme.scss */
+.material-card.Cyan .mc-footer h4 {
+  color: #006064;
+}
+
+/* line 699, scss/_material_theme.scss */
+.material-card.Cyan .mc-footer a {
+  background-color: #006064;
+}
+
+/* line 702, scss/_material_theme.scss */
+.material-card.Cyan.mc-active .mc-content {
+  background-color: #E0F7FA;
+}
+
+/* line 705, scss/_material_theme.scss */
+.material-card.Cyan.mc-active .mc-footer {
+  background-color: #B2EBF2;
+}
+
+/* line 708, scss/_material_theme.scss */
+.material-card.Cyan.mc-active .mc-btn-action {
+  border-color: #E0F7FA;
+}
+
+/* line 711, scss/_material_theme.scss */
+.material-card.Teal h2 {
+  background-color: #009688;
+}
+
+/* line 714, scss/_material_theme.scss */
+.material-card.Teal h2:after {
+  border-top-color: #009688;
+  border-right-color: #009688;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 720, scss/_material_theme.scss */
+.material-card.Teal h2:before {
+  border-top-color: transparent;
+  border-right-color: #004D40;
+  border-bottom-color: #004D40;
+  border-left-color: transparent;
+}
+
+/* line 726, scss/_material_theme.scss */
+.material-card.Teal.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #009688;
+  border-bottom-color: #009688;
+  border-left-color: transparent;
+}
+
+/* line 732, scss/_material_theme.scss */
+.material-card.Teal.mc-active h2:after {
+  border-top-color: #004D40;
+  border-right-color: #004D40;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 738, scss/_material_theme.scss */
+.material-card.Teal .mc-btn-action {
+  background-color: #009688;
+}
+
+/* line 741, scss/_material_theme.scss */
+.material-card.Teal .mc-btn-action:hover {
+  background-color: #004D40;
+}
+
+/* line 744, scss/_material_theme.scss */
+.material-card.Teal .mc-footer h4 {
+  color: #004D40;
+}
+
+/* line 747, scss/_material_theme.scss */
+.material-card.Teal .mc-footer a {
+  background-color: #004D40;
+}
+
+/* line 750, scss/_material_theme.scss */
+.material-card.Teal.mc-active .mc-content {
+  background-color: #E0F2F1;
+}
+
+/* line 753, scss/_material_theme.scss */
+.material-card.Teal.mc-active .mc-footer {
+  background-color: #B2DFDB;
+}
+
+/* line 756, scss/_material_theme.scss */
+.material-card.Teal.mc-active .mc-btn-action {
+  border-color: #E0F2F1;
+}
+
+/* line 759, scss/_material_theme.scss */
+.material-card.Green h2 {
+  background-color: #4CAF50;
+}
+
+/* line 762, scss/_material_theme.scss */
+.material-card.Green h2:after {
+  border-top-color: #4CAF50;
+  border-right-color: #4CAF50;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 768, scss/_material_theme.scss */
+.material-card.Green h2:before {
+  border-top-color: transparent;
+  border-right-color: #1B5E20;
+  border-bottom-color: #1B5E20;
+  border-left-color: transparent;
+}
+
+/* line 774, scss/_material_theme.scss */
+.material-card.Green.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #4CAF50;
+  border-bottom-color: #4CAF50;
+  border-left-color: transparent;
+}
+
+/* line 780, scss/_material_theme.scss */
+.material-card.Green.mc-active h2:after {
+  border-top-color: #1B5E20;
+  border-right-color: #1B5E20;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 786, scss/_material_theme.scss */
+.material-card.Green .mc-btn-action {
+  background-color: #4CAF50;
+}
+
+/* line 789, scss/_material_theme.scss */
+.material-card.Green .mc-btn-action:hover {
+  background-color: #1B5E20;
+}
+
+/* line 792, scss/_material_theme.scss */
+.material-card.Green .mc-footer h4 {
+  color: #1B5E20;
+}
+
+/* line 795, scss/_material_theme.scss */
+.material-card.Green .mc-footer a {
+  background-color: #1B5E20;
+}
+
+/* line 798, scss/_material_theme.scss */
+.material-card.Green.mc-active .mc-content {
+  background-color: #E8F5E9;
+}
+
+/* line 801, scss/_material_theme.scss */
+.material-card.Green.mc-active .mc-footer {
+  background-color: #C8E6C9;
+}
+
+/* line 804, scss/_material_theme.scss */
+.material-card.Green.mc-active .mc-btn-action {
+  border-color: #E8F5E9;
+}
+
+/* line 807, scss/_material_theme.scss */
+.material-card.Light-Green h2 {
+  background-color: #8BC34A;
+}
+
+/* line 810, scss/_material_theme.scss */
+.material-card.Light-Green h2:after {
+  border-top-color: #8BC34A;
+  border-right-color: #8BC34A;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 816, scss/_material_theme.scss */
+.material-card.Light-Green h2:before {
+  border-top-color: transparent;
+  border-right-color: #33691E;
+  border-bottom-color: #33691E;
+  border-left-color: transparent;
+}
+
+/* line 822, scss/_material_theme.scss */
+.material-card.Light-Green.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #8BC34A;
+  border-bottom-color: #8BC34A;
+  border-left-color: transparent;
+}
+
+/* line 828, scss/_material_theme.scss */
+.material-card.Light-Green.mc-active h2:after {
+  border-top-color: #33691E;
+  border-right-color: #33691E;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 834, scss/_material_theme.scss */
+.material-card.Light-Green .mc-btn-action {
+  background-color: #8BC34A;
+}
+
+/* line 837, scss/_material_theme.scss */
+.material-card.Light-Green .mc-btn-action:hover {
+  background-color: #33691E;
+}
+
+/* line 840, scss/_material_theme.scss */
+.material-card.Light-Green .mc-footer h4 {
+  color: #33691E;
+}
+
+/* line 843, scss/_material_theme.scss */
+.material-card.Light-Green .mc-footer a {
+  background-color: #33691E;
+}
+
+/* line 846, scss/_material_theme.scss */
+.material-card.Light-Green.mc-active .mc-content {
+  background-color: #F1F8E9;
+}
+
+/* line 849, scss/_material_theme.scss */
+.material-card.Light-Green.mc-active .mc-footer {
+  background-color: #DCEDC8;
+}
+
+/* line 852, scss/_material_theme.scss */
+.material-card.Light-Green.mc-active .mc-btn-action {
+  border-color: #F1F8E9;
+}
+
+/* line 855, scss/_material_theme.scss */
+.material-card.Lime h2 {
+  background-color: #CDDC39;
+}
+
+/* line 858, scss/_material_theme.scss */
+.material-card.Lime h2:after {
+  border-top-color: #CDDC39;
+  border-right-color: #CDDC39;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 864, scss/_material_theme.scss */
+.material-card.Lime h2:before {
+  border-top-color: transparent;
+  border-right-color: #827717;
+  border-bottom-color: #827717;
+  border-left-color: transparent;
+}
+
+/* line 870, scss/_material_theme.scss */
+.material-card.Lime.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #CDDC39;
+  border-bottom-color: #CDDC39;
+  border-left-color: transparent;
+}
+
+/* line 876, scss/_material_theme.scss */
+.material-card.Lime.mc-active h2:after {
+  border-top-color: #827717;
+  border-right-color: #827717;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 882, scss/_material_theme.scss */
+.material-card.Lime .mc-btn-action {
+  background-color: #CDDC39;
+}
+
+/* line 885, scss/_material_theme.scss */
+.material-card.Lime .mc-btn-action:hover {
+  background-color: #827717;
+}
+
+/* line 888, scss/_material_theme.scss */
+.material-card.Lime .mc-footer h4 {
+  color: #827717;
+}
+
+/* line 891, scss/_material_theme.scss */
+.material-card.Lime .mc-footer a {
+  background-color: #827717;
+}
+
+/* line 894, scss/_material_theme.scss */
+.material-card.Lime.mc-active .mc-content {
+  background-color: #F9FBE7;
+}
+
+/* line 897, scss/_material_theme.scss */
+.material-card.Lime.mc-active .mc-footer {
+  background-color: #F0F4C3;
+}
+
+/* line 900, scss/_material_theme.scss */
+.material-card.Lime.mc-active .mc-btn-action {
+  border-color: #F9FBE7;
+}
+
+/* line 903, scss/_material_theme.scss */
+.material-card.Yellow h2 {
+  background-color: #FFEB3B;
+}
+
+/* line 906, scss/_material_theme.scss */
+.material-card.Yellow h2:after {
+  border-top-color: #FFEB3B;
+  border-right-color: #FFEB3B;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 912, scss/_material_theme.scss */
+.material-card.Yellow h2:before {
+  border-top-color: transparent;
+  border-right-color: #F57F17;
+  border-bottom-color: #F57F17;
+  border-left-color: transparent;
+}
+
+/* line 918, scss/_material_theme.scss */
+.material-card.Yellow.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #FFEB3B;
+  border-bottom-color: #FFEB3B;
+  border-left-color: transparent;
+}
+
+/* line 924, scss/_material_theme.scss */
+.material-card.Yellow.mc-active h2:after {
+  border-top-color: #F57F17;
+  border-right-color: #F57F17;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 930, scss/_material_theme.scss */
+.material-card.Yellow .mc-btn-action {
+  background-color: #FFEB3B;
+}
+
+/* line 933, scss/_material_theme.scss */
+.material-card.Yellow .mc-btn-action:hover {
+  background-color: #F57F17;
+}
+
+/* line 936, scss/_material_theme.scss */
+.material-card.Yellow .mc-footer h4 {
+  color: #F57F17;
+}
+
+/* line 939, scss/_material_theme.scss */
+.material-card.Yellow .mc-footer a {
+  background-color: #F57F17;
+}
+
+/* line 942, scss/_material_theme.scss */
+.material-card.Yellow.mc-active .mc-content {
+  background-color: #FFFDE7;
+}
+
+/* line 945, scss/_material_theme.scss */
+.material-card.Yellow.mc-active .mc-footer {
+  background-color: #FFF9C4;
+}
+
+/* line 948, scss/_material_theme.scss */
+.material-card.Yellow.mc-active .mc-btn-action {
+  border-color: #FFFDE7;
+}
+
+/* line 951, scss/_material_theme.scss */
+.material-card.Amber h2 {
+  background-color: #FFC107;
+}
+
+/* line 954, scss/_material_theme.scss */
+.material-card.Amber h2:after {
+  border-top-color: #FFC107;
+  border-right-color: #FFC107;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 960, scss/_material_theme.scss */
+.material-card.Amber h2:before {
+  border-top-color: transparent;
+  border-right-color: #FF6F00;
+  border-bottom-color: #FF6F00;
+  border-left-color: transparent;
+}
+
+/* line 966, scss/_material_theme.scss */
+.material-card.Amber.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #FFC107;
+  border-bottom-color: #FFC107;
+  border-left-color: transparent;
+}
+
+/* line 972, scss/_material_theme.scss */
+.material-card.Amber.mc-active h2:after {
+  border-top-color: #FF6F00;
+  border-right-color: #FF6F00;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 978, scss/_material_theme.scss */
+.material-card.Amber .mc-btn-action {
+  background-color: #FFC107;
+}
+
+/* line 981, scss/_material_theme.scss */
+.material-card.Amber .mc-btn-action:hover {
+  background-color: #FF6F00;
+}
+
+/* line 984, scss/_material_theme.scss */
+.material-card.Amber .mc-footer h4 {
+  color: #FF6F00;
+}
+
+/* line 987, scss/_material_theme.scss */
+.material-card.Amber .mc-footer a {
+  background-color: #FF6F00;
+}
+
+/* line 990, scss/_material_theme.scss */
+.material-card.Amber.mc-active .mc-content {
+  background-color: #FFF8E1;
+}
+
+/* line 993, scss/_material_theme.scss */
+.material-card.Amber.mc-active .mc-footer {
+  background-color: #FFECB3;
+}
+
+/* line 996, scss/_material_theme.scss */
+.material-card.Amber.mc-active .mc-btn-action {
+  border-color: #FFF8E1;
+}
+
+/* line 999, scss/_material_theme.scss */
+.material-card.Orange h2 {
+  background-color: #FF9800;
+}
+
+/* line 1002, scss/_material_theme.scss */
+.material-card.Orange h2:after {
+  border-top-color: #FF9800;
+  border-right-color: #FF9800;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1008, scss/_material_theme.scss */
+.material-card.Orange h2:before {
+  border-top-color: transparent;
+  border-right-color: #E65100;
+  border-bottom-color: #E65100;
+  border-left-color: transparent;
+}
+
+/* line 1014, scss/_material_theme.scss */
+.material-card.Orange.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #FF9800;
+  border-bottom-color: #FF9800;
+  border-left-color: transparent;
+}
+
+/* line 1020, scss/_material_theme.scss */
+.material-card.Orange.mc-active h2:after {
+  border-top-color: #E65100;
+  border-right-color: #E65100;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1026, scss/_material_theme.scss */
+.material-card.Orange .mc-btn-action {
+  background-color: #FF9800;
+}
+
+/* line 1029, scss/_material_theme.scss */
+.material-card.Orange .mc-btn-action:hover {
+  background-color: #E65100;
+}
+
+/* line 1032, scss/_material_theme.scss */
+.material-card.Orange .mc-footer h4 {
+  color: #E65100;
+}
+
+/* line 1035, scss/_material_theme.scss */
+.material-card.Orange .mc-footer a {
+  background-color: #E65100;
+}
+
+/* line 1038, scss/_material_theme.scss */
+.material-card.Orange.mc-active .mc-content {
+  background-color: #FFF3E0;
+}
+
+/* line 1041, scss/_material_theme.scss */
+.material-card.Orange.mc-active .mc-footer {
+  background-color: #FFE0B2;
+}
+
+/* line 1044, scss/_material_theme.scss */
+.material-card.Orange.mc-active .mc-btn-action {
+  border-color: #FFF3E0;
+}
+
+/* line 1047, scss/_material_theme.scss */
+.material-card.Deep-Orange h2 {
+  background-color: #FF5722;
+}
+
+/* line 1050, scss/_material_theme.scss */
+.material-card.Deep-Orange h2:after {
+  border-top-color: #FF5722;
+  border-right-color: #FF5722;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1056, scss/_material_theme.scss */
+.material-card.Deep-Orange h2:before {
+  border-top-color: transparent;
+  border-right-color: #BF360C;
+  border-bottom-color: #BF360C;
+  border-left-color: transparent;
+}
+
+/* line 1062, scss/_material_theme.scss */
+.material-card.Deep-Orange.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #FF5722;
+  border-bottom-color: #FF5722;
+  border-left-color: transparent;
+}
+
+/* line 1068, scss/_material_theme.scss */
+.material-card.Deep-Orange.mc-active h2:after {
+  border-top-color: #BF360C;
+  border-right-color: #BF360C;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1074, scss/_material_theme.scss */
+.material-card.Deep-Orange .mc-btn-action {
+  background-color: #FF5722;
+}
+
+/* line 1077, scss/_material_theme.scss */
+.material-card.Deep-Orange .mc-btn-action:hover {
+  background-color: #BF360C;
+}
+
+/* line 1080, scss/_material_theme.scss */
+.material-card.Deep-Orange .mc-footer h4 {
+  color: #BF360C;
+}
+
+/* line 1083, scss/_material_theme.scss */
+.material-card.Deep-Orange .mc-footer a {
+  background-color: #BF360C;
+}
+
+/* line 1086, scss/_material_theme.scss */
+.material-card.Deep-Orange.mc-active .mc-content {
+  background-color: #FBE9E7;
+}
+
+/* line 1089, scss/_material_theme.scss */
+.material-card.Deep-Orange.mc-active .mc-footer {
+  background-color: #FFCCBC;
+}
+
+/* line 1092, scss/_material_theme.scss */
+.material-card.Deep-Orange.mc-active .mc-btn-action {
+  border-color: #FBE9E7;
+}
+
+/* line 1095, scss/_material_theme.scss */
+.material-card.Brown h2 {
+  background-color: #795548;
+}
+
+/* line 1098, scss/_material_theme.scss */
+.material-card.Brown h2:after {
+  border-top-color: #795548;
+  border-right-color: #795548;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1104, scss/_material_theme.scss */
+.material-card.Brown h2:before {
+  border-top-color: transparent;
+  border-right-color: #3E2723;
+  border-bottom-color: #3E2723;
+  border-left-color: transparent;
+}
+
+/* line 1110, scss/_material_theme.scss */
+.material-card.Brown.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #795548;
+  border-bottom-color: #795548;
+  border-left-color: transparent;
+}
+
+/* line 1116, scss/_material_theme.scss */
+.material-card.Brown.mc-active h2:after {
+  border-top-color: #3E2723;
+  border-right-color: #3E2723;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1122, scss/_material_theme.scss */
+.material-card.Brown .mc-btn-action {
+  background-color: #795548;
+}
+
+/* line 1125, scss/_material_theme.scss */
+.material-card.Brown .mc-btn-action:hover {
+  background-color: #3E2723;
+}
+
+/* line 1128, scss/_material_theme.scss */
+.material-card.Brown .mc-footer h4 {
+  color: #3E2723;
+}
+
+/* line 1131, scss/_material_theme.scss */
+.material-card.Brown .mc-footer a {
+  background-color: #3E2723;
+}
+
+/* line 1134, scss/_material_theme.scss */
+.material-card.Brown.mc-active .mc-content {
+  background-color: #EFEBE9;
+}
+
+/* line 1137, scss/_material_theme.scss */
+.material-card.Brown.mc-active .mc-footer {
+  background-color: #D7CCC8;
+}
+
+/* line 1140, scss/_material_theme.scss */
+.material-card.Brown.mc-active .mc-btn-action {
+  border-color: #EFEBE9;
+}
+
+/* line 1143, scss/_material_theme.scss */
+.material-card.Grey h2 {
+  background-color: #9E9E9E;
+}
+
+/* line 1146, scss/_material_theme.scss */
+.material-card.Grey h2:after {
+  border-top-color: #9E9E9E;
+  border-right-color: #9E9E9E;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1152, scss/_material_theme.scss */
+.material-card.Grey h2:before {
+  border-top-color: transparent;
+  border-right-color: #212121;
+  border-bottom-color: #212121;
+  border-left-color: transparent;
+}
+
+/* line 1158, scss/_material_theme.scss */
+.material-card.Grey.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #9E9E9E;
+  border-bottom-color: #9E9E9E;
+  border-left-color: transparent;
+}
+
+/* line 1164, scss/_material_theme.scss */
+.material-card.Grey.mc-active h2:after {
+  border-top-color: #212121;
+  border-right-color: #212121;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1170, scss/_material_theme.scss */
+.material-card.Grey .mc-btn-action {
+  background-color: #9E9E9E;
+}
+
+/* line 1173, scss/_material_theme.scss */
+.material-card.Grey .mc-btn-action:hover {
+  background-color: #212121;
+}
+
+/* line 1176, scss/_material_theme.scss */
+.material-card.Grey .mc-footer h4 {
+  color: #212121;
+}
+
+/* line 1179, scss/_material_theme.scss */
+.material-card.Grey .mc-footer a {
+  background-color: #212121;
+}
+
+/* line 1182, scss/_material_theme.scss */
+.material-card.Grey.mc-active .mc-content {
+  background-color: #FAFAFA;
+}
+
+/* line 1185, scss/_material_theme.scss */
+.material-card.Grey.mc-active .mc-footer {
+  background-color: #F5F5F5;
+}
+
+/* line 1188, scss/_material_theme.scss */
+.material-card.Grey.mc-active .mc-btn-action {
+  border-color: #FAFAFA;
+}
+
+/* line 1191, scss/_material_theme.scss */
+.material-card.Blue-Grey h2 {
+  background-color: #607D8B;
+}
+
+/* line 1194, scss/_material_theme.scss */
+.material-card.Blue-Grey h2:after {
+  border-top-color: #607D8B;
+  border-right-color: #607D8B;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1200, scss/_material_theme.scss */
+.material-card.Blue-Grey h2:before {
+  border-top-color: transparent;
+  border-right-color: #263238;
+  border-bottom-color: #263238;
+  border-left-color: transparent;
+}
+
+/* line 1206, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active h2:before {
+  border-top-color: transparent;
+  border-right-color: #607D8B;
+  border-bottom-color: #607D8B;
+  border-left-color: transparent;
+}
+
+/* line 1212, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active h2:after {
+  border-top-color: #263238;
+  border-right-color: #263238;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 1218, scss/_material_theme.scss */
+.material-card.Blue-Grey .mc-btn-action {
+  background-color: #607D8B;
+}
+
+/* line 1221, scss/_material_theme.scss */
+.material-card.Blue-Grey .mc-btn-action:hover {
+  background-color: #263238;
+}
+
+/* line 1224, scss/_material_theme.scss */
+.material-card.Blue-Grey .mc-footer h4 {
+  color: #263238;
+}
+
+/* line 1227, scss/_material_theme.scss */
+.material-card.Blue-Grey .mc-footer a {
+  background-color: #263238;
+}
+
+/* line 1230, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active .mc-content {
+  background-color: #ECEFF1;
+}
+
+/* line 1233, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active .mc-footer {
+  background-color: #CFD8DC;
+}
+
+/* line 1236, scss/_material_theme.scss */
+.material-card.Blue-Grey.mc-active .mc-btn-action {
+  border-color: #ECEFF1;
+}
+
+/*
+* @Author: sumansaurabh
+* @Date:   2018-05-02 02:39:12
+* @Last Modified by:   sumansaurabh
+* @Last Modified time: 2018-06-06 00:47:13
+*/
+/* line 8, scss/_blogcard.scss */
+.blog-card {
+  /*My hum... body.. yeah.. */
+  /* The card */
+  /* Image on the left side */
+  /*object-fit: cover; */
+  /*object-position: center; */
+  /* Right side of the card */
+  /* DATE of release */
+  /*h6 {
+	  position: absolute;
+	  left: 30px;
+	  bottom: 0px;
+	  font-size: 2rem;
+	  color: #C3C3C3;
+	}*/
+  /* Those futur buttons */
+  /* Floating action button */
+}
+
+/* line 12, scss/_blogcard.scss */
+.blog-card span.s1 {
+  position: absolute;
+  top: 0;
+  font-size: 15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #3C4447;
+}
+
+/* line 21, scss/_blogcard.scss */
+.blog-card span.s2 {
+  font-weight: 800;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 15rem;
+  text-transform: uppercase;
+  color: #3C4447;
+}
+
+/* line 35, scss/_blogcard.scss */
+.blog-card .card {
+  position: relative;
+  height: 365px;
+  width: 100%;
+  margin: 60px auto;
+  background-color: #FFF;
+  -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* line 47, scss/_blogcard.scss */
+.blog-card .thumbnail {
+  float: left;
+  position: relative;
+  left: 30px;
+  top: 40px;
+  height: 320px;
+  width: 30%;
+  -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  /*overflow: hidden;*/
+}
+
+/* line 62, scss/_blogcard.scss */
+.blog-card img.left {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 186px;
+  width: 186px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2200;
+}
+
+/* line 75, scss/_blogcard.scss */
+.blog-card .right {
+  margin-left: 225px;
+  margin-right: 20px;
+}
+
+/* line 80, scss/_blogcard.scss */
+.blog-card h1 {
+  padding-top: 15px;
+  font-size: 1.3rem;
+  color: #4B4B4B;
+}
+
+/* line 86, scss/_blogcard.scss */
+.blog-card .tag {
+  display: inline;
+  background-color: #9ECAFF;
+  height: auto;
+  width: auto;
+  border-radius: 20px;
+  margin-right: 2px;
+  padding-bottom: 2px;
+}
+
+/* line 95, scss/_blogcard.scss */
+.blog-card .tag h2 {
+  display: inline;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 0.8rem;
+}
+
+/* line 105, scss/_blogcard.scss */
+.blog-card .separator {
+  margin-top: 10px;
+  border: 1px solid #C3C3C3;
+}
+
+/* line 110, scss/_blogcard.scss */
+.blog-card p {
+  text-align: justify;
+  padding-top: 10px;
+  font-size: 0.95rem;
+  line-height: 150%;
+  color: #4B4B4B;
+}
+
+/* line 119, scss/_blogcard.scss */
+.blog-card h5 {
+  /* position: absolute;
+	  left: 30px;
+	  bottom: 0px;
+	  font-size: 8rem;
+	  color: #C3C3C3;*/
+}
+
+/* line 136, scss/_blogcard.scss */
+.blog-card ul {
+  margin-left: 250px;
+}
+
+/* line 140, scss/_blogcard.scss */
+.blog-card li {
+  display: inline;
+  list-style: none;
+  padding-right: 40px;
+  color: #7B7B7B;
+}
+
+/* line 148, scss/_blogcard.scss */
+.blog-card .fab {
+  position: absolute;
+  right: 50px;
+  bottom: -40px;
+  box-sizing: border-box;
+  padding-top: 18px;
+  background-color: #1875D0;
+  width: 80px;
+  height: 80px;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* line 165, scss/_blogcard.scss */
+.blog-card .share-icons {
+  font-size: 40px;
+  position: absolute;
+  bottom: -35px;
+  right: 175px;
+  font-color: #C3C3C3;
+}
+
+/* line 173, scss/_blogcard.scss */
+.blog-card .itm-date {
+  position: absolute;
+  left: 30px;
+  bottom: 0px;
+  color: #C3C3C3;
+  opacity: 0.8;
+}
+
+/* line 179, scss/_blogcard.scss */
+.blog-card .itm-date h5 {
+  font-size: 60px;
+}
+
+/* line 183, scss/_blogcard.scss */
+.blog-card .itm-date h6 {
+  margin-bottom: -15px;
+  font-size: 37px;
+}
+
+@media only screen and (max-width: 500px) {
+  /* line 192, scss/_blogcard.scss */
+  .blog-card .itm-date {
+    display: none;
+  }
+  /* line 196, scss/_blogcard.scss */
+  .blog-card .thumbnail {
+    display: none;
+  }
+  /* line 200, scss/_blogcard.scss */
+  .blog-card .right {
+    margin-left: 10px;
+    /*margin-right: 20px;*/
+  }
+}
+
+/*
+* @Author: sumansaurabh
+* @Date:   2018-05-04 23:19:48
+* @Last Modified by:   sumansaurabh
+* @Last Modified time: 2018-06-06 01:18:32
+*/
+/* line 10, scss/_burgermenu.scss */
+#burger-display #burger-menu {
+  cursor: pointer;
+  top: 0px;
+  left: 0px;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-bottom-right-radius: 200px;
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease;
+  overflow: visible;
+  position: fixed;
+  z-index: 2;
+}
+
+/* line 24, scss/_burgermenu.scss */
+#burger-display #burger-menu span,
+#burger-display #burger-menu span:before,
+#burger-display #burger-menu span:after {
+  background: white;
+  display: block;
+  height: 4px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+
+/* line 34, scss/_burgermenu.scss */
+#burger-display #burger-menu span:before,
+#burger-display #burger-menu span:after {
+  content: "";
+}
+
+/* line 38, scss/_burgermenu.scss */
+#burger-display #burger-menu span {
+  left: 15px;
+  top: 35px;
+  width: 40px;
+}
+
+/* line 43, scss/_burgermenu.scss */
+#burger-display #burger-menu span:before {
+  left: 0px;
+  top: -10px;
+  width: 40px;
+}
+
+/* line 48, scss/_burgermenu.scss */
+#burger-display #burger-menu span:after {
+  left: 0px;
+  top: 10px;
+  width: 40px;
+}
+
+/* line 54, scss/_burgermenu.scss */
+#burger-display #burger-menu.burger-close span {
+  transform: rotate(-45deg);
+  top: 35px;
+  width: 40px;
+  background: white;
+}
+
+/* line 60, scss/_burgermenu.scss */
+#burger-display #burger-menu.burger-close span:before {
+  top: 0px;
+  transform: rotate(90deg);
+  width: 40px;
+  background: white;
+}
+
+/* line 66, scss/_burgermenu.scss */
+#burger-display #burger-menu.burger-close span:after {
+  top: 0px;
+  left: 0;
+  transform: rotate(90deg);
+  opacity: 0;
+  width: 0;
+  background: white;
+}
+
+/* line 75, scss/_burgermenu.scss */
+#burger-display #menu {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 90, scss/_burgermenu.scss */
+#burger-display #menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* line 97, scss/_burgermenu.scss */
+#burger-display #menu li {
+  list-style: none;
+}
+
+/* line 100, scss/_burgermenu.scss */
+#burger-display #menu a {
+  color: #fff;
+  display: block;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=../sass */

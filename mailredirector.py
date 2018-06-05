@@ -3,27 +3,24 @@ from google.appengine.ext import webapp
 from google.appengine.ext.webapp.mail_handlers import InboundMailHandler
 from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.api import mail
+import config
 
 
-# Use prefix matching on username part of email address
-#  and fwd the email to addresses based on that part.
+# This class is a mail redirector application that forwards the mail sent to the website to its owner.
 class MailRedirector(InboundMailHandler):
-    sender = "\"Suman Saurabh\" <info@suman-saurabh.appspotmail.com>"
+
+    """Mail Sent to the mail server is to be redirected """
+    
+    sender = "\""+config.OWNER_NAME+"\" <"+config.WEBSITE_MAIL_SERVER+">"
 
     
-    mailaddress = "sumanrocs@gmail.com";
 
-    def recipient_of_pattern(self, recipient):
-        
-        return MailRedirector.mailaddress
-
-    # called by GAE when an email is received.
+    # Called by GAE when an email is received.
     def receive(self, inmsg):
         # log this msg for kicks
         # download the logs to dev machine using:
-        # appcfg.py --severity=0 request_logs <appname> <file_to_dump>
-        if not hasattr(inmsg, 'subject'):
-            inmsg.subject = "####No subject####"
+        # appcfg.py --severity=0 request_logs <appname> <file_to_dump>        if not hasattr(inmsg, 'subject'):
+        nmsg.subject = "####No subject####"
 
         logging.info("Received a message from: " + inmsg.sender +
                     ", to " + inmsg.to + ", subject: " + inmsg.subject)
@@ -31,16 +28,9 @@ class MailRedirector(InboundMailHandler):
         oumsg = mail.EmailMessage()
 
 
-        # GAE doesn't allow setting the From address to arbitary
-        # values. Workaround: Set the sender as the mail redirector
-        # and specify the original sender in the body of the email.
+        
         oumsg.sender = MailRedirector.sender
-
-        # is incoming message from the address from which we send? if so,
-        # somebody spoofed the address, or GAE encountered an
-        # error sending the email and sent an err msg back.
-        # for now, just log the event and ignore it. TODO
-        # distinguish between error messages and potential loop/spoof.
+        # TODO distinguish between error messages and potential loop/spoof.
         inmsg_email_address = email.utils.parseaddr(inmsg.sender)[1]
         my_email_address = email.utils.parseaddr(MailRedirector.sender)[1]
         if inmsg_email_address == my_email_address:
@@ -49,17 +39,14 @@ class MailRedirector(InboundMailHandler):
             return
 
 
-        # compute the address to forward to
-        oumsg.to = self.recipient_of_pattern(inmsg.to)
+        # compute the address to forward to    
+
+        oumsg.to = config.OWNER_MAIL_ID
         # at least we are allowed to set an arbitrary subject :)
         oumsg.subject = inmsg.subject
 
         # gather up the plain text parts of the incoming email
-        # and cat them together. Add original sender as body text prefix
-        # since we can't set the sender to anything we please.
-        # InboundMailMessage can handle multiple plaintext parts
-        # but outbound requires a single body field. Hence no option
-        # but to cat the multiple parts if present.
+        # and cat them together. 
         body = None
 
         for plaintext in inmsg.bodies(content_type='text/plain'):
@@ -68,9 +55,6 @@ class MailRedirector(InboundMailHandler):
             body = body + plaintext[1].decode()
 
         if body == None:
-            # corner case: if no body, oumsg.send() will fail. This is
-            # a GAE limitation: no emails without body. Set a special
-            # string as body.
             oumsg.body = "####Original email had no body text.####"
         else:
             oumsg.body = body

@@ -1,0 +1,107 @@
+/*
+* @Author: sumansaurabh
+* @Date:   2018-05-04 23:19:48
+* @Last Modified by:   sumansaurabh
+* @Last Modified time: 2018-06-06 01:18:32
+*/
+
+#burger-display {
+
+	#burger-menu {
+	  cursor: pointer;
+	  top: 0px;
+	  left: 0px;
+	  width: 100px;
+	  height: 100px;
+	  background-color: black;
+	  border-bottom-right-radius: 200px;
+	  cursor: pointer;
+	  transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease;
+	  overflow: visible;
+	  position: fixed;
+	   z-index:2;
+	}
+	#burger-menu span,
+	#burger-menu span:before,
+	#burger-menu span:after {
+	  background: white;
+	  display: block;
+	  height: 4px;
+	  opacity: 1;
+	  position: absolute;
+	  transition: 0.3s ease-in-out;
+	}
+	#burger-menu span:before,
+	#burger-menu span:after {
+	  content: "";
+	}
+	#burger-menu span {
+	  left: 15px;
+	  top: 35px;
+	  width: 40px;
+	}
+	#burger-menu span:before {
+	  left: 0px;
+	  top: -10px;
+	  width: 40px;
+	}
+	#burger-menu span:after {
+	  left: 0px;
+	  top: 10px;
+	  width: 40px;
+	}
+
+	#burger-menu.burger-close span {
+	  transform: rotate(-45deg);
+	  top: 35px;
+	  width: 40px;
+	  background: white;
+	}
+	#burger-menu.burger-close span:before {
+	  top: 0px;
+	  transform: rotate(90deg);
+	  width: 40px;
+	  background: white;
+	}
+	#burger-menu.burger-close span:after {
+	  top: 0px;
+	  left:0;
+	  transform: rotate(90deg);
+	  opacity:0;
+	  width:0;
+	  background: white;
+	}
+
+	#menu{
+	  z-index:1;
+	  min-width:100%;
+	  min-height:100%;
+	  position: fixed;
+	  top:0;
+	  height:0;
+	  visibility: hidden;
+	  opacity: 0;
+	  text-align:center;
+	  padding-top:20px;
+	  transition: all 0.3s ease-in-out;
+	  
+	}
+
+	#menu.overlay{
+	  visibility: visible;
+	  opacity: 1;
+	  padding-top:100px;
+	  background:rgba(0,0,0,0.9);
+	}
+
+	#menu li{
+	  list-style:none;
+	}
+	#menu a{
+	  color:#fff;
+	  display:block;
+	  font-size: 32px;
+	  margin-bottom:30px;
+	  text-decoration:none;
+	}
+}

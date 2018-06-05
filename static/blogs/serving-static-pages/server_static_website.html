@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/highlight.min.css">
+    <style type="text/css">
+      body {
+        color: #132442;
+      }
+      #list2 { 
+        background-color: white;
+        border-radius: 25px;
+        border: 2px solid white;
+        color: black;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/Google_App_Engine.svg.png')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Serving static website</h1>
+              <h2 class="subheading">When you do not have a credit card</h2>
+              <span class="meta">Posted by
+                <a href="#">Suman Saurabh</a>
+                on October 26, 2014</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-md-10 mx-auto">
+            <p>Static sites are the most basic type of website and are the easiest to create. Unlike dynamic websites, they do not require any Web programming or database design. They are mostly used for blogging or creating portoflios.</p>
+
+            <p>You’ve put in all the hard work of creating a static website, blog, you want to get it on the web so people can access its content. But you might be a student, Indian student, or any person who don't have an access to a credit card. I was in a similar situation and I found Google App Engine(GAE) doesn't need credit card to deploy a static website.</p>
+
+
+            <p>In this blog we will be covering:</p>
+            <div id="list2">
+              <ol>
+                  <li><p><em>Deploy and Host a website</em> We will get a domain from GAE, similar to <a href="">http://game-2048.appspot.com</a> We will be deploying the Game-2048 from <a href="">https://github.com/gabrielecirulli/2048</a></p></li>
+                  <li><p><em>Creating your own mail-server</em> Similar to <u>info@game-2048.appspot.com</u></p></li>
+                  <li><p><em>Hosting to a free <b>.tk</b> domain</em> Yup it will be free.</p></li>
+              </ol>
+            </div>
+
+            <p>To deploy, you should have a bit of python knowledge, if you need to dirty your hands. </p>
+
+            <p>Your website must have been ready by now. In case you are a newbie, please check out the tons of resource avaialable on Internet</p>
+
+            <hr>
+            <hr>
+            <hr>
+
+            <h3 class="section-heading" id="Installing_Google_App_Engine">1. Installing Google App Engine</h3>
+
+            <p>Since we will be using GAE-Python to host, here is the link to install GAE in your machine: <a href="https://cloud.google.com/appengine/docs/standard/python/download" target="_blank">GAE Installation</a>. Please follow the steps correctly as documentation is bit unclear.</p>
+
+            <h3 class="section-heading" id="CREATING_GAE">2. Creating a GAE-Project</h3>
+
+            <p>To use Google's tools for your own site or app, you need to create a new project on Google Cloud Platform from your Google account. Go to the <a href="https://console.cloud.google.com/projectselector/appengine">App Engine dashboard</a> on the Google Cloud Platform Console and create a project.</p>
+
+            
+            <p>When creating App engine application from, the application id is very important. Because it acts as subdomain for your site. Lets say, application id is game-2048, the site will be in game-2048.appspot.com.</p>
+           <!--  <div id="list3">
+              <ol your project.</p> -->
+                  <img src="img/static_website/application_created.png" width="100%">
+
+               <!--  </li>
+              </ol> 
+            </div> -->
+
+            <h2 class="section-heading">3. Loading source code to GAE</h2>
+
+            <div id="list3">
+              <ol>
+                <li><span class="li-span">a.</span><p><br>
+                  We will need a sample GAE app or download it from the <a href="https://codeload.github.com/sumansaurabh/Portfolio-AppEngine/zip/master" target="_blank">link</a>. </p>
+                </li>
+                
+                
+                <li><span class="li-span">b.</span><p>Directory strucutre of the <i>downloaded</i> app is:
+
+                  <div class="src_code">
+                   <pre><code class="bash">
+├── app.yaml                                  #Holds the configuration file for project
+├── config.py                                  #User config file, will be discussed later
+├── controllerhandle.py                #No changes required
+├── index.yaml                               #No changes required
+├── mailredirector.py                    #No changes required
+├── main.py                                   #No changes required
+├── README.md
+└── <span class="green-color">static</span>                             #This is the place where website file should be dumped in their respective location
+    ├── <span class="green-color">css</span>
+    │   ├── *.css
+    ├── <span class="green-color">fonts</span>
+    │   ├── *.otf
+    ├── <span class="green-color">images</span>
+    │   ├── *.jpg
+    ├── <span class="green-color">templates</span>
+    │   ├── *.*
+    ├── <span class="green-color">js</span>
+    │   ├── *.js
+    ├── <span class="green-color">others</span>
+    │   └── *.*
+    └── index.html
+
+              </code></pre>
+
+                  </div>
+                </p>
+
+
+
+
+              </li>
+
+              <li><span class="li-span">c.</span><p>The A sample content is present in <span class="green-color">static</span> folder. If the content of your website follows a different strcture, you need to learn to configure <span class="brown-color">app.yaml</span>, which is pretty easy.</p>
+              <p>You might be using package manager like <span class="triadic-blue">bower, npm</span> and it's possible to use those in GAE which is not covered in this blog, but you can use this <a href="https://cloud.google.com/community/tutorials/install-bower-dependencies-on-google-app-engine" target="_blank">link</a> to read about it and configure your app.
+
+                <div class="src_code">
+                   <pre><code class="zsh">
+<span class="brown-color">application</span>: games-2048                          #Will have the name of your GAE application, could be anything like 'gondor'
+<span class="brown-color">version</span>: 1                         
+<span class="brown-color">runtime</span>: python27
+<span class="brown-color">api_version</span>: 1
+<span class="brown-color">threadsafe</span>: true
+
+
+#If you have a different directory structure, you need to edit these handlers.
+#The folder '/css' will serve all '*.css' file. If your '*.css' is in '/styles' folder, please add '/styles' in the 'handlers'.
+
+
+########################### Example #################################### 
+# handler:
+# - url: /styles
+# - static_dir: static/styles
+########################################################################
+
+<span class="brown-color">handlers</span>:
+- url: /css
+  static_dir: static/css
+
+- url: /js
+  static_dir: static/js
+
+- url: /images
+  static_dir: static/images
+
+- url: /others
+  static_dir: static/others
+
+
+#This is used to build GAE mail server, it's covered later in the blog.
+- url: /_ah/mail/info@.*game-2048\.appspotmail\.com
+  script: mailredirector.application
+  login: admin
+
+
+
+- url: /.*
+  script: main.application
+
+
+<span class="brown-color">inbound_services</span>:
+- mail
+
+<span class="brown-color">libraries</span>:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
+              </code></pre>
+
+                  </div>
+
+
+              </p>
+
+              </li>
+              <li><span class="li-span">d.</span><p>
+                    <b style="font-size: 30px;"> Adding Mail server to your application</b></p>
+                    <p>It will allow you to create your own mailing address like: <span class="blue-color">connect@gondor.appspotmail.com</span>. Any mail sent to this address will be reverted to your mail box. To achieve this, you have to modify <span class="brown-color">config.py</span> and <span class="brown-color">app.yaml</span> file.
+                      <div class="src_code">
+                   <pre><code class="python">
+
+####################################### config.py ############################################
+
+#Replace your own mail address like - 'connect@gondor.appspotmail.com'
+WEBSITE_MAIL_SERVER="info@game-2048.appspotmail.com"
+
+#Replace with your personal mail id
+OWNER_MAIL_ID="johndoe@gmail.com"
+
+
+
+
+              </code></pre>
+
+                  </div>
+
+                  
+                <div class="src_code">
+                   <pre><code class="zsh">
+
+############################# app.yaml #################################
+
+#The above and below code of app.yaml remains the same
+
+#modify 'info@.*game-2048\.appspotmail\.com' to 'connect@.*gondor\.appspotmail\.com'
+- url: /_ah/mail/info@.*game-2048\.appspotmail\.com
+  script: mailredirector.application
+  login: admin
+
+
+              </code></pre>
+
+                  </div>
+
+
+                  </p>
+                </li>
+              </ol> 
+            </div>
+            <h3 class="section-heading" id="Installing_Google_App_Engine">4. Deploying the code</h3>
+            <br>
+            <div id="list3">
+              <ol>
+                <li><span class="li-span">a.</span>
+                  <p>
+                    <b style="font-size: 25px;"> Testing local deployment</b><br>
+                    <br>
+                    Run the <span class="brown-color">dev_appserver.py</span> command as follows from the directory that contains your app's <span class="brown-color">app.yaml</span> configuration file:
+                    Specify the directory path to your app, for example:
+                    <div class="src_code_single_line">dev_appserver.py [PATH_TO_YOUR_APP]</div>
+
+
+                  </p>
+                  
+                </li>
+                <li><span class="li-span">b.</span>
+                  <p>
+                    <b style="font-size: 25px;"> Sending it to Web</b><br>
+                    <br>
+                    From the same directory run the following command
+                    <div class="src_code_single_line">gcloud app deploy</div>
+
+                    <p>Now navigate your browser to [your-project-id].appspot.com to see your website online. In this case <a href="http://game-2048.appspot.com">http://game-2048.appspot.com</a> </p>
+
+
+                  </p>
+                  
+                </li>
+              </ol>
+            </div>
+
+            <h3 class="section-heading" id="Installing_Google_App_Engine">5. Free [].tk domain</h3>
+            <br>
+            <div id="list3">
+              <ol>
+                <li><span class="li-span">a.</span>
+                  <p>
+                    <b style="font-size: 25px;"> SignUp </b><br>
+                    <br>
+                    SignUp on website <a href="http://www.dot.tk/en/index.html?lang=en">http://www.dot.tk</a> and check availability of your domain, click on <b>Checkout</b>.
+                    <br>
+                    <img src="img/static_website/domain_available.png" style="padding-top: 20px;" width="100%">
+                  </p>  
+                  
+                </li>
+                <li><span class="li-span">b.</span>
+                  <p>
+                    <b style="font-size: 25px;">Configure DNS</b><br>
+                    <br>
+                    There is no a DNS configuration required. <a href="http://www.freenom.com/en/index.html?lang=en">Freenom</a>(.tk provider) facilitates service to redirect to your website url i.e http://game-2048.appspot.com
+                    <img src="img/static_website/configure_dns.png" style="padding-top: 20px;" width="100%">
+
+
+                  </p>
+                  <p>Click on <b>Continue</b> and your website will be ready with .tk domain. </p>
+                </li>
+              </ol>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">&copy; Suman Saurabh</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/highlight.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
